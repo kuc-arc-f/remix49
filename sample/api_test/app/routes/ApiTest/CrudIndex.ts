@@ -35,39 +35,30 @@ console.log(postItem);
    *
    * @return
    */
-  addItem : async function(item) : Promise<any>
+  addItem : async function() : Promise<any>
   {
-      try{
-          let ret = false;
-          const json = await HttpCommon.post(item, "/test/create");
-          let items: any[] = [];
-          items = json;
-console.log(json);      
-          /*
-          const postItem = {
-            userId: 0,
-          }
-    console.log(postItem); 
-          const values = Crud.getInputValues();
-          const item = {
-              "api_key": "",
-              "title": values.title,
-              "content": "content1",
-              "completed": 0,
-              "userId": 0
-          };            
+    try{
+      let ret = false;  
+      const values = Crud.getInputValues();
+      const item = {
+        "api_key": "",
+        "title": values.title,
+        "content": "content1",
+        "completed": 0,
+        "userId": 0
+      };            
 console.log(item);
-          const json = await HttpCommon.serverPost(item, "/test/create");
-          if (json.ret ===  LibConfig.OK_CODE) {
-              ret = true;
-          }
-          */
-          return ret;
-      } catch (e) {
-          console.error("Error, addItem");
-          console.error(e);
-          throw new Error('Error , addItem');
+      const json = await HttpCommon.serverPost(item, "/test/create");
+      if (json.ret ===  LibConfig.OK_CODE) {
+          ret = true;
       }
+      //console.log(json);
+      return ret;
+    } catch (e) {
+      console.error("Error, addItem");
+      console.error(e);
+      throw new Error('Error , addItem');
+    }
   },
 
 }

@@ -79,23 +79,20 @@ console.log(data);
       <hr className="my-2" />
       <p>id: {data.id}, {data.createdAt}</p>
       <hr className="my-2" />
-      <Form method="post" name="form_delete" id="form_delete" 
-      className="remix__form">
-        <label className="text-2xl font-bold d-none">
-          <div>title:</div>
-          <input  className="input_text" defaultValue={itemId}
-          name="item_id" id="item_id" type="text" />
-        </label>
-        <div>
-          <button type="submit" className="btn-red my-2">Delete</button>
-        </div>
-      </Form>
       <hr />
     </div>
   );
 }
 /*
-<hr className="my-2" />
-<button className="btn-red" onClick={()=>deleteProc()}>Delete
-</button>    
+<Form method="post" name="form_delete" id="form_delete" 
+className="remix__form">
+  <label className="text-2xl font-bold d-none">
+    <div>title:</div>
+    <input  className="input_text" defaultValue={itemId}
+    name="item_id" id="item_id" type="text" />
+  </label>
+  <div>
+      <button type="submit" className="btn-red my-2">Delete</button>
+  </div>
+</Form>
 */
