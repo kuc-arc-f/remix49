@@ -25,3 +25,8 @@ yarn build
 yarn dev
 ```
 ***
+### blog
+
+https://zenn.dev/knaka0209/scraps/f55d4b52b9c424
+
+***
