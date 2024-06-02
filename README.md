@@ -16,6 +16,11 @@ Remix + adapter express, API sample
 * adapter: @remix-run/express
 
 ***
+### Stackblitz
+
+https://stackblitz.com/~/github.com/kuc-arc-f/remix49
+
+***
 ### build
 
 ```
