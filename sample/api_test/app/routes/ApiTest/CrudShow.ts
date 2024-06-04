@@ -43,11 +43,11 @@ const CrudShow = {
         //console.log(item);
         const json = await HttpCommon.post(item, "/test/delete");
 console.log(json);
-        /*
-console.log(data);
-        if (data.ret ===  LibConfig.OK_CODE) {
+        if (json.ret ===  LibConfig.OK_CODE) {
             ret = true;
         }      
+/*
+console.log(data);
         */
             return ret;      
         } catch (e) {

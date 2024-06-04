@@ -18,9 +18,9 @@ import type {
   ActionFunctionArgs,
   LoaderFunctionArgs,
 } from "@remix-run/node";
-import CrudIndex from './ApiTest/CrudIndex';
+//import CrudIndex from './ApiTest/CrudIndex';
 import CrudShow from './ApiTest/CrudShow';
-import LibConfig from '../lib/LibConfig';
+//import LibConfig from '../lib/LibConfig';
 //value
 let itemId = 0;
 //
@@ -42,32 +42,33 @@ console.log("id=", id);
   const resulte = await CrudShow.get(itemId);
 //console.log(resulte);
   return json({
-    data: resulte
+    data: resulte, id: itemId
   });
 };
 //
-export const action = async ({
-  params,
-  request,
-}: ActionFunctionArgs) => {
-  let formData = await request.formData();
-  let item_id = formData.get("item_id");
-console.log("itemId=", itemId);
-  const resulte = await CrudShow.delete(itemId);
-  if(resulte) {
-    location.href= "/apitest";
-  }
-  return json({ ret: LibConfig.OK_CODE });
-}
-//
 export default function Index() {
-  const { data } = useLoaderData<typeof loader>();
+  const { data, id } = useLoaderData<typeof loader>();
 console.log(data);
-  const actionData = useActionData<typeof action>();
-  if(actionData){
-    console.log("ret=", actionData.ret);
-    if(actionData.ret === LibConfig.OK_CODE){
-      location.href= "/apitest";
+console.log("id=", id);
+  itemId = id;
+  /**
+   *
+   * @param
+   *
+   * @return
+   */
+  const deleteProc = async function(){
+    try{    
+console.log("itemId=", itemId);
+      const resulte = await CrudShow.delete(itemId);
+      if(resulte) {
+        alert("OK, delete");
+        location.href= "/apitest";
+      }
+    } catch (e) {
+      console.error("Error, deleteProc");
+      console.error(e);
+      throw new Error('Error , deleteProc');
     }
   }
   //
@@ -79,20 +80,10 @@ console.log(data);
       <hr className="my-2" />
       <p>id: {data.id}, {data.createdAt}</p>
       <hr className="my-2" />
+      <button onClick={()=>deleteProc()}>Delete</button>
       <hr />
     </div>
   );
 }
 /*
-<Form method="post" name="form_delete" id="form_delete" 
-className="remix__form">
-  <label className="text-2xl font-bold d-none">
-    <div>title:</div>
-    <input  className="input_text" defaultValue={itemId}
-    name="item_id" id="item_id" type="text" />
-  </label>
-  <div>
-      <button type="submit" className="btn-red my-2">Delete</button>
-  </div>
-</Form>
 */
