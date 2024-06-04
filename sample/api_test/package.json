@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "npm run clean && remix vite:build && npm run build:server",
-    "build:server": "node build.js && cp -pr ./build/client/assets public",
-    "clean": "rimraf build && rimraf public/assets && rimraf public/public",
+    "build:server": "node build.js && node buildCopy.js",
+    "clean": "rimraf build && rimraf public/assets",
     "dev": "nodemon",
     "dev:test": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
