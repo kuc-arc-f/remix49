@@ -6,7 +6,7 @@
 
  date   : 2024/06/01 
 
- update : 2024/06/07
+ update : 2024/06/08
 
 ***
 ### Summary
@@ -19,6 +19,14 @@ Remix + adapter express, API sample
 ### Stackblitz
 
 https://stackblitz.com/~/github.com/kuc-arc-f/remix49
+
+***
+### Sample
+
+* sample/api_test: api sample
+
+* sample/simple_auth: simple auth, user data from .env
+
 
 ***
 ### build
