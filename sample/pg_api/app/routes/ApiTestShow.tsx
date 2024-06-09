@@ -40,7 +40,7 @@ export const loader = async (
   itemId = Number(id);
 console.log("id=", id);
   const resulte = await CrudShow.get(itemId);
-//console.log(resulte);
+console.log(resulte);
   return json({
     data: resulte, id: itemId
   });
@@ -80,7 +80,9 @@ console.log("itemId=", itemId);
       <hr className="my-2" />
       <p>id: {data.id}, {data.createdAt}</p>
       <hr className="my-2" />
-      <button onClick={()=>deleteProc()}>Delete</button>
+      <button onClick={()=>deleteProc()}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded"
+      >Delete</button>
       <hr />
     </div>
   );
