@@ -18,7 +18,7 @@ const CrudShow = {
                 id: id,
             }
             //console.log(postItem); 
-            const json = await HttpCommon.post(postItem, "/test/get");
+            const json = await HttpCommon.post(postItem, "/todos/get");
             ret = json.data;
 //console.log(json);      
             return ret;
@@ -41,7 +41,7 @@ const CrudShow = {
                 id: id
             }
         //console.log(item);
-        const json = await HttpCommon.post(item, "/test/delete");
+        const json = await HttpCommon.post(item, "/todos/delete");
 console.log(json);
         if (json.ret ===  LibConfig.OK_CODE) {
             ret = true;

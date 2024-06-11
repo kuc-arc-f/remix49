@@ -2,7 +2,7 @@
 export default function Compo(props: any) {
   return (
   <div>
-    <span>ApiTest</span>
+    <span>TursoApi</span>
     <hr />    
     <a href="/">[ home ]</a>
     <a href="/about">[ about ]</a>

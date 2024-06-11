@@ -88,7 +88,8 @@ export default function Index() {
             <h3 className="text-3xl font-bold">{item.title}</h3>
             <p>ID :{item.id}</p>
             <a href={`/apitestshow?id=${item.id}`}>
-              <button className="btn-outline-purple ms-2">Show</button>
+              <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded ms-2"
+              >Show</button>
             </a>
             <hr className="my-2" />
           </li>

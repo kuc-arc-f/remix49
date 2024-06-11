@@ -45,7 +45,12 @@ console.log("id=", id);
     data: resulte, id: itemId
   });
 };
-//
+/**
+ *
+ * @param
+ *
+ * @return
+ */
 export default function Index() {
   const { data, id } = useLoaderData<typeof loader>();
 console.log(data);
@@ -80,7 +85,9 @@ console.log("itemId=", itemId);
       <hr className="my-2" />
       <p>id: {data.id}, {data.createdAt}</p>
       <hr className="my-2" />
-      <button onClick={()=>deleteProc()}>Delete</button>
+      <button onClick={()=>deleteProc()}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded"
+      >Delete</button>
       <hr />
     </div>
   );
