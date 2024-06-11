@@ -27,6 +27,9 @@ https://stackblitz.com/~/github.com/kuc-arc-f/remix49
 
 * sample/simple_auth: simple auth, user data from .env
 
+* sample/pg_api: postgres api sample
+
+* sample/turso_api: Turso api, sample
 
 ***
 ### build
