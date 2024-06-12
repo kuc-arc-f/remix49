@@ -7,7 +7,6 @@ export default function Compo(props: any) {
     <a href="/">[ home ]</a>
     <a href="/about">[ about ]</a>
     <a href="/test">[ Test ]</a>
-    <a href="/apitest">[ ApiTest ]</a>
     <a href="/tursotest">[ TursoTest ]</a>
     <hr />
   </div>
