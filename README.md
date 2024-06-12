@@ -23,13 +23,17 @@ https://stackblitz.com/~/github.com/kuc-arc-f/remix49
 ***
 ### Sample
 
-* sample/api_test: api sample
+* api_test: api sample
 
-* sample/simple_auth: simple auth, user data from .env
+* simple_auth: simple auth, user data from .env
 
-* sample/pg_api: postgres api sample
+* pg_api: postgres api sample
 
-* sample/turso_api: Turso api, sample
+* turso_api: Turso api, sample
+
+* turso_test: Turso LibSQL SDK, sample
+
+* md_test: Markdown display, sample
 
 ***
 ### build
