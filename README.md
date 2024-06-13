@@ -35,6 +35,8 @@ https://stackblitz.com/~/github.com/kuc-arc-f/remix49
 
 * md_test: Markdown display, sample
 
+* er_chart : mermaid.js display sample
+
 ***
 ### build
 
