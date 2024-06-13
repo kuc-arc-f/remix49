@@ -20,3 +20,10 @@ Remix, mermaid.js display sample
 ```
 VITE_EXTERNAL_API_URL="http://localhost"
 ```
+***
+### API : workers + D1
+
+https://github.com/kuc-arc-f/hono_34api
+
+
+***
