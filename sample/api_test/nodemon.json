@@ -1,6 +1,6 @@
 {
-  "watch": ["app"],
+  "watch": ["src"],
   "ext": "ts,tsx,js,jsx", 
-  "ignore": ["app/**/*.txt"],
-  "exec": "npm run build && node build/server.js"
+  "ignore": ["src/**/*.txt"],
+  "exec": "npm run build:server && node build/server.js"
 }
