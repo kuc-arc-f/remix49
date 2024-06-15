@@ -5,10 +5,10 @@ import fs from "fs";
 
 // サーバー側のビルド
 const serverOptions = {
-  entryPoints: [path.resolve("./app/server.ts")],
+  entryPoints: [path.resolve("./src/server.ts")],
   minify: true,
   bundle: true,
-  target: "es2020",
+  target: "ES2022",
   platform: "node",
   format: 'esm', // ESMプロジェクトに設定
   outdir: path.resolve("./build"),
